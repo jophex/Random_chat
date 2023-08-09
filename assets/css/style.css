@@ -1,0 +1,124 @@
+/* INPUT FIELD */
+
+
+.input {
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    border-radius: 89% 29% 90% 23% / 0% 100% 0% 100%;
+    border-color: transparent;
+    width: 200px;
+    height: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:25em auto;
+    text-align: center;
+    font-weight: 500;
+    font-family: inherit;
+    box-shadow: 23px 23px 46px #bebebe,
+               -23px -23px 46px #ffffff;
+  }
+  
+  .input::placeholder {
+    color: white;
+  }
+
+  /* INPUT FIELD END */
+
+  /* BUTTON  START*/
+
+  button {
+    background-color: #fff;
+    border: 1px solid #25D366;
+    padding: 5px;
+    position: relative;
+    width: 6.2em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    /* margin-left: 50em; */
+  }
+  
+  button p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #25D366;
+  }
+  
+  button svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff
+  }
+  
+  button:hover p {
+    left: 0.5em;
+    color: #fff
+  }
+  
+  button:hover svg {
+    opacity: 1;
+  }
+  
+  button:hover {
+    background-color: #25D366;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements horizontally */
+  }
+  
+  .button-div {
+    margin-top: -19em; /* Negative margin-top to bring the button closer to the input */
+  }
+
+  /* BUTTON END */
+
+
+  /*  START THE video-streams */
+
+  .video-streams{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    height: 90vh;
+    width: 1400px;
+  }
+
+  .video-container{
+    height: 100%;
+    border: 2px solid black;
+    
+  }
+
+  .video-player{
+    height: 100%;
+    width: 100%;
+  }
+
+  .stream-controls{
+    display: none;
+  }
+
+
+
+
+
+  
