@@ -1,6 +1,13 @@
+body{
+  background:#0F2027;
+  background:-webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027) ;
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+
+}
+
+
+
 /* INPUT FIELD */
-
-
 .input {
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
@@ -16,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:25em auto;
+    margin:7em auto;
     text-align: center;
     font-weight: 500;
     font-family: inherit;
@@ -87,7 +94,7 @@
   }
   
   .button-div {
-    margin-top: -19em; /* Negative margin-top to bring the button closer to the input */
+    margin-top: -5em; /* Negative margin-top to bring the button closer to the input */
   }
 
   /* BUTTON END */
@@ -96,15 +103,17 @@
   /*  START THE video-streams */
 
   .video-streams{
-    display: grid;
+    display:grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     height: 90vh;
     width: 1400px;
+    margin:0 auto;
   }
 
   .video-container{
-    height: 100%;
+    max-height: 100%;
     border: 2px solid black;
+    background-color: #203A49;
     
   }
 
@@ -115,8 +124,16 @@
 
   .stream-controls{
     display: none;
+    justify-content: center;
+    margin-top:0.5em;
   }
 
+  @media screen and (max-width:1400px){
+    .video-streams{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        width: 95%;
+    }
+}
 
 
 
