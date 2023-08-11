@@ -19,9 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (usernamevalue === "") {
       Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Something went wrong!",
-        footer: '<a href="">Why do I have this issue?</a>',
+        title: "🙄Oops...",
+        text: "Please Enter Your Name!",
       });
     } else {
 
@@ -59,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let joinStream = async () => {
         await joinAndDisplayLocalStream();
         Button.style.display = "none";
+        username.style.display = "none"
+        
         stream_control.style.display = "flex";
       };
       
@@ -75,6 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 player = `<div class="video-container" id="user-container-${user.uid}">
                     <div class="video-player" id="user-${user.uid}"></div>
+                    
+                    <div class="name">
+                    <h1 id="display-name">${usernamevalue}</h1>
+                  </div>
                 
                 </div>`
 
