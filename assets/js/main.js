@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-//   const APP_ID = "5ab0265f0d524dfd81c420403c5a4a3f";
-    const APP_ID = "b52f4ae477094c20beef7f8175c91ab1";
-    const TEMP_ID= "007eJxTYHBVNHnSPkt1duOE7BKOmTNzlvp8VmOUEvt4RPvRvcvn1l1RYEgyNUozSUw1MTc3sDRJNjJISk1NM0+zMDQ3TbY0TEwyTHt0JaUhkJFhRVoJEyMDBIL4HAzJGYklRfn5uQwMAO5JIjc=";
-//   const CHANNEL_NAME = "main";
+    const APP_ID = "3341710b1b044936858c7d80b3fe3952";
+    const TEMP_ID= "007eJxTYFi81Hq7mAvHtYw3wvN+FgX85spi4rw4UbWna/c7u0Aeb34FBmNjE0NzQ4MkwyQDExNLYzMLU4tk8xQLgyTjtFRjS1OjgvQ7KQ2BjAx/DaqZGRkgEMTnYEjOSCwpys/PZWAAAB35Hsc=";
     const CHANNEL_NAME = "chatroom"
 
 
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   Button.addEventListener("click", () => {
-    const usernamevalue = username.value.trim();
+    let usernamevalue = username.value.trim();
 
     if (usernamevalue === "") {
       Swal.fire({
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
 
     let joinname = document.getElementById('display_name')
-    joinname.innerHTML = usernamevalue
+   
 
 
       const agoraEngine = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
@@ -59,39 +57,37 @@ document.addEventListener("DOMContentLoaded", () => {
         await joinAndDisplayLocalStream();
         Button.style.display = "none";
         username.style.display = "none"
-        
+        joinname.innerHTML = usernamevalue
         stream_control.style.display = "flex";
       };
       
 
-      let handleUserJoined = async(user, mediaType) => {
-            remoteUsers[user.uid] = user
-            await agoraEngine.subscribe(user, mediaType);
-
-            if(mediaType === 'video'){
-                let player = document.getElementById(`user-container-${user.uid}`)
-                if(player != null){
-                    player.remove()
-                }
-
-                player = `<div class="video-container" id="user-container-${user.uid}">
-                    <div class="video-player" id="user-${user.uid}"></div>
-                    
-                    <div class="name">
-                    <h1 id="display-name">${usernamevalue}</h1>
-                  </div>
-                
-                </div>`
-
-                videostream.insertAdjacentHTML('beforeend', player)
-                user.videoTrack.play(`user-${user.uid}`)
+      let handleUserJoined = async (user, mediaType, usernamevalue) => {
+        remoteUsers[user.uid] = user;
+        await agoraEngine.subscribe(user, mediaType);
+    
+        if (mediaType === "video") {
+            let player = document.getElementById(`user-container-${user.uid}`);
+            if (player != null) {
+                player.remove();
             }
-
-            if(mediaType === 'audio'){
-                user.audioTrack.play()
-
-            }
+    
+            player = `<div class="video-container" id="user-container-${user.uid}">
+                        <div class="video-player" id="user-${user.uid}"></div>
+                        
+                        <div class="name">
+                          <h1 id="display-name">${usernamevalue}</h1>
+                        </div>
+                    </div>`;
+    
+            videostream.insertAdjacentHTML("beforeend", player);
+            user.videoTrack.play(`user-${user.uid}`);
         }
+    
+        if (mediaType === "audio") {
+            user.audioTrack.play();
+        }
+    };
     
     
     let handleUserLeft = async(user) => {
@@ -119,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.target.style.backgroundColor = 'cadetblue'
       }else{
         await localTracks[0].setMuted(true)
-        e.target.innerText = 'Mic off'
+        e.target.innerText = '<i class="fas fa-microphone"></i> Mic on'
         e.target.style.backgroundColor = '#EE4B2B'
       }
 
