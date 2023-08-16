@@ -134,14 +134,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+ // Show the loader
+// Show the loader
+function showLoader() {
+  const loader = document.querySelector('.ui-abstergo');
+  loader.classList.remove('hidden');
+}
+
+// Hide the loader
+function hideLoader() {
+  const loader = document.querySelector('.ui-abstergo');
+  loader.classList.add('hidden');
+}
+
+// Simulate an asynchronous task
+async function performAsyncTask() {
+  showLoader();
+
+  // Simulate an asynchronous task (replace this with your actual async task)
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  hideLoader();
+}
+
+// Attach the event listener to a button or trigger
 
 
+
+
+
+
+
+
+
+// Show the loader
+function showLoader() {
+  const loader = document.querySelector('.ui-abstergo');
+  loader.classList.remove('hidden');
+}
+
+// Hide the loader
+function hideLoader() {
+  const loader = document.querySelector('.ui-abstergo');
+  loader.classList.add('hidden');
+}
+
+// Simulate an asynchronous task
+async function performAsyncTask() {
+  showLoader();
+
+  // Simulate an asynchronous task (replace this with your actual async task)
+  await new Promise(resolve => setTimeout(resolve, 3000));
+
+  hideLoader();
+}
+
+// Attach the event listener to the "Join" button (or any other desired element)
+document.querySelector('.join-btn').addEventListener('click', performAsyncTask);
+document.querySelector('.start-task-btn').addEventListener('click', performAsyncTask);
 document.querySelector(".leave-btn").addEventListener("click", leaveAndRemoveLocalStream)
 document.querySelector('.mic-btn').addEventListener("click", toggleMic)
 document.querySelector('.camera-btn').addEventListener("click", toggleCamera)
 Button.addEventListener("click", joinStream)
     
-
 
     }
   });

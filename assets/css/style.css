@@ -8,7 +8,7 @@ body {
   background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   align-items: center;
   min-height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .name{
@@ -153,6 +153,9 @@ button:hover {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         width: 95%;
     }
+    .ui-abstergo {
+      margin-top: -55em;
+    }
 }
 
 
@@ -189,7 +192,7 @@ button:hover {
   align-items: center;
   row-gap: 30px;
   scale: var(--size);
-  margin-bottom: 50em;
+  margin-top: -60em;
 
 }
 
@@ -290,6 +293,10 @@ button:hover {
   bottom: 7px;
   right: -11px;
   rotate: 180deg;
+}
+
+.hidden {
+  display: none;
 }
 
 @-webkit-keyframes line1 {
