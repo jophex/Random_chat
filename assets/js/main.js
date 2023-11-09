@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const APP_ID = "3341710b1b044936858c7d80b3fe3952";
-    const TEMP_ID= "007eJxTYFi81Hq7mAvHtYw3wvN+FgX85spi4rw4UbWna/c7u0Aeb34FBmNjE0NzQ4MkwyQDExNLYzMLU4tk8xQLgyTjtFRjS1OjgvQ7KQ2BjAx/DaqZGRkgEMTnYEjOSCwpys/PZWAAAB35Hsc=";
+    const TEMP_ID =
+      "007eJxTYPDJE9y9St0yeMm5B3qvo927dqjY6mbYV741eu91cfWmV+wKDMbGJobmhgZJhkkGJiaWxmYWphbJ5ikWBknGaanGlqZGkmJuqQ2BjAyl928zMEIhiM/BkJyRWFKUn5/LwAAAYJoffg==";
     const CHANNEL_NAME = "chatroom"
 
-
+  console.log('im here')
   const username = document.getElementById("Name");
   const Button = document.getElementById("join");
 
@@ -134,64 +135,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
- // Show the loader
 // Show the loader
-function showLoader() {
-  const loader = document.querySelector('.ui-abstergo');
-  loader.classList.remove('hidden');
-}
+// function showLoader() {
+//   const loader = document.querySelector('.ui-abstergo');
+//   loader.classList.remove('hidden');
+// }
 
-// Hide the loader
-function hideLoader() {
-  const loader = document.querySelector('.ui-abstergo');
-  loader.classList.add('hidden');
-}
+// // Hide the loader
+// function hideLoader() {
+//   const loader = document.querySelector('.ui-abstergo');
+//   loader.classList.add('hidden');
+// }
 
-// Simulate an asynchronous task
-async function performAsyncTask() {
-  showLoader();
+// // Simulate an asynchronous task
+// async function performAsyncTask() {
+//   showLoader();
 
-  // Simulate an asynchronous task (replace this with your actual async task)
-  await new Promise(resolve => setTimeout(resolve, 3000));
+//   // Simulate an asynchronous task (replace this with your actual async task)
+//   await new Promise(resolve => setTimeout(resolve, 3000));
 
-  hideLoader();
-}
+//   hideLoader();
+// }
 
-// Attach the event listener to a button or trigger
-
-
-
-
-
-
-
-
-
-// Show the loader
-function showLoader() {
-  const loader = document.querySelector('.ui-abstergo');
-  loader.classList.remove('hidden');
-}
-
-// Hide the loader
-function hideLoader() {
-  const loader = document.querySelector('.ui-abstergo');
-  loader.classList.add('hidden');
-}
-
-// Simulate an asynchronous task
-async function performAsyncTask() {
-  showLoader();
-
-  // Simulate an asynchronous task (replace this with your actual async task)
-  await new Promise(resolve => setTimeout(resolve, 3000));
-
-  hideLoader();
-}
 
 // Attach the event listener to the "Join" button (or any other desired element)
-document.querySelector('.join-btn').addEventListener('click', performAsyncTask);
-document.querySelector('.start-task-btn').addEventListener('click', performAsyncTask);
+// document.querySelector('.join-btn').addEventListener('click', performAsyncTask);
+// document.querySelector('.start-task-btn').addEventListener('click', performAsyncTask);
 document.querySelector(".leave-btn").addEventListener("click", leaveAndRemoveLocalStream)
 document.querySelector('.mic-btn').addEventListener("click", toggleMic)
 document.querySelector('.camera-btn').addEventListener("click", toggleCamera)
