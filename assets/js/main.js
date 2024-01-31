@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const APP_ID = "3341710b1b044936858c7d80b3fe3952";
+    const APP_ID = "3341710b1b044936858c7d80b3fe3952"; // AgoraRtc
     const TEMP_ID =
-      "007eJxTYPDJE9y9St0yeMm5B3qvo927dqjY6mbYV741eu91cfWmV+wKDMbGJobmhgZJhkkGJiaWxmYWphbJ5ikWBknGaanGlqZGkmJuqQ2BjAyl928zMEIhiM/BkJyRWFKUn5/LwAAAYJoffg==";
-    const CHANNEL_NAME = "chatroom"
+      "Get room id from AgoraRTC web";
+    const CHANNEL_NAME = "chatroom" // chatroom name here
 
   console.log('im here')
   const username = document.getElementById("Name");
