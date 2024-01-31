@@ -135,6 +135,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+document.querySelector(".leave-btn").addEventListener("click", leaveAndRemoveLocalStream)
+document.querySelector('.mic-btn').addEventListener("click", toggleMic)
+document.querySelector('.camera-btn').addEventListener("click", toggleCamera)
+Button.addEventListener("click", joinStream)
+    
+
+    }
+  });
+});
+
+
 // Show the loader
 // function showLoader() {
 //   const loader = document.querySelector('.ui-abstergo');
@@ -161,12 +173,3 @@ document.addEventListener("DOMContentLoaded", () => {
 // Attach the event listener to the "Join" button (or any other desired element)
 // document.querySelector('.join-btn').addEventListener('click', performAsyncTask);
 // document.querySelector('.start-task-btn').addEventListener('click', performAsyncTask);
-document.querySelector(".leave-btn").addEventListener("click", leaveAndRemoveLocalStream)
-document.querySelector('.mic-btn').addEventListener("click", toggleMic)
-document.querySelector('.camera-btn').addEventListener("click", toggleCamera)
-Button.addEventListener("click", joinStream)
-    
-
-    }
-  });
-});

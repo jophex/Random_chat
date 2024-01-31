@@ -1,87 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/main.js"></script>
     <title>Random Chat</title>
-</head>
-<body>
-  <div class="name">
-    <h1 id="display_name"></h1>
-  </div>
-  
+  </head>
+  <body>
+    <div class="name">
+      <h1 id="display_name"></h1>
+    </div>
 
     <!-- THE FORM HEREEEE -->
     <form class="form" action="">
-        <input type="text" id="Name" autocomplete="off" placeholder="Enter Your Name" name="text" class="input">
-        <div class="button-div">
-          <button id="join" type="button">
-            <p>Join</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="26" fill="currentColor" class="bi bi-camera-video" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"/>
-            </svg>
-          </button>
-        </div>
-      </form>
-
-
-      <!-- FROM ENDS HERE -->
-
-      <!-- CREATING THE VIDEO CHAT ROOM HERE -->
-
-      <div class="stream-wrapper">
-        <div class="video-streams"></div>
-
-        <div class="stream-controls">
-            <button class="leave-btn">Leave</button>
-            <button class="mic-btn">Mic on</button>
-            <button class="camera-btn">Camera</button>
-        </div>
+      <input
+        type="text"
+        id="Name"
+        autocomplete="off"
+        placeholder="Enter Your Name"
+        name="text"
+        class="input"
+      />
+      <div class="button-div">
+        <button id="join" type="button">
+          <p>Join</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="26"
+            fill="currentColor"
+            class="bi bi-camera-video"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z"
+            />
+          </svg>
+        </button>
       </div>
+    </form>
 
+    <!-- FROM ENDS HERE -->
 
+    <!-- CREATING THE VIDEO CHAT ROOM HERE -->
 
-      <!-- LOADER -->
+    <div class="stream-wrapper">
+      <div class="video-streams"></div>
 
+      <div class="stream-controls">
+        <button class="leave-btn">Leave</button>
+        <button class="mic-btn">Mic on</button>
+        <button class="camera-btn">Camera</button>
+      </div>
+    </div>
 
-      
+    <!-- LOADER THAT WAS TO BE ADDED-->
 
+    <!-- VIDEO CHATROOM ENDS HERE BUT BOTHING HAS BEEN DONE YET-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- VIDEO CHATROOM ENDS HERE -->
-
-
-
-
-      
-      
-      <!-- scripts -->
-        <script src="assets/js/AgoraRTC_N-4.18.2.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet">
-</body>
+    <!-- scripts -->
+    <script src="assets/js/AgoraRTC_N-4.18.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+  </body>
 </html>
